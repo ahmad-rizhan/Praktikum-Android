@@ -9,8 +9,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.PraktikumAndroid">
+        android:theme="@style/Theme.PraktikumAndroid"
         android:usesCleartextTraffic="true">
+
         <activity android:name=".ui.user.UserActivity"/>
         <activity android:name=".ui.jenisbarang.JenisbarangActivity">
             <intent-filter>
