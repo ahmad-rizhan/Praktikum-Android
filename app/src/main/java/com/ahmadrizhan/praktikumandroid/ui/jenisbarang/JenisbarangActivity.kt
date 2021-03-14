@@ -1,5 +1,6 @@
 package com.ahmadrizhan.praktikumandroid.ui.jenisbarang
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +15,8 @@ class JenisbarangActivity : AppCompatActivity(){
     private val viewModel: JenisbarangViewModel by lazy {
         ViewModelProvider(this).get(JenisbarangViewModel::class.java)
     }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityJenisbarangBinding.inflate(layoutInflater)
@@ -24,6 +27,11 @@ class JenisbarangActivity : AppCompatActivity(){
         binding.progressBarJenisbarang.visibility = View.VISIBLE
 
         getListJenisbarang()
+
+        binding.btTambahJenisbarang.setOnClickListener{
+            val intent = Intent(this, JenisbarangPostActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 
@@ -36,4 +44,5 @@ class JenisbarangActivity : AppCompatActivity(){
             binding.rvJenisbarang.adapter = listJenisbarangAdapter
         })
     }
+
 }

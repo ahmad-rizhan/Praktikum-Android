@@ -19,4 +19,11 @@
         android:layout_height="fill_parent"
         tools:listitem="@layout/item_row_jenisbarang" />
 
+    <Button
+        android:id="@+id/btTambahJenisbarang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tambah"
+        />
+
 </LinearLayout>
